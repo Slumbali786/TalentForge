@@ -1,0 +1,41 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TalentForge.DL.Entities.Regular_User
+{
+    public class Skills
+    {
+
+        [Key]
+        public int SID { get; set; }
+
+      //  [ForeignKey("RUID")]
+        //public ICollection<RegUser> RUID { get; set; }
+
+        [Required]
+        public string Skill1 { get; set; }
+
+        [Required]
+        public string Skill2 { get; set; }
+
+        [Required]
+        public string Skill3 { get; set; }
+
+        [Required]
+        public string Skill4 { get; set; }
+
+        [Required]
+        public string Skill5 { get; set; }
+
+        [Required]
+        public string Skill6 { get; set; }
+
+        [Required]
+        public string Skill7 { get; set; }
+    }
+}
