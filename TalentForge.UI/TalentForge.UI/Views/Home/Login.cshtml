@@ -1,8 +1,73 @@
 ﻿@{
     ViewData["Title"] = "Login Page";
 }
+<style>
+    table label {
+        font-size: 24px; /* Adjust the font size as needed */
+    }
 
-<div class="text-center">
-    <h1 class="display-4">Login</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    table button {
+        font-size: 30px;
+    }
+
+    .btn-md {
+        font-size: 34px; /* Adjust the font size to make the button bigger */
+        padding: 10px 20px; /* Adjust padding for width and height */
+    }
+</style>
+<div class="container">
+    <h1 class="display-4 text-center">TalentForge Login</h1>
+
+    <form method="post" asp-controller="Home" asp-action="Login">
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <!-- First Column -->
+            </div>
+            <div class="col-md-6">
+                <!-- Second Column (Centered) -->
+
+                <table class="table">
+                    <tr>
+                        <td>
+                            <label for="Username">Username:</label>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" id="Username" name="Username" placeholder="Enter your username" required>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Password">Password:</label>
+                        </td>
+                        <td>
+                            <input type="password" class="form-control" id="Password" name="Password" placeholder="Enter your password" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label></label>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-md">Login</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <!-- Third Column -->
+            </div>
+        </div>
+    </form>
+
+    <!-- Move this outside of the form -->
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="RegUser" asp-action="RUHome">Reg User Home</a>
+    </li>
 </div>

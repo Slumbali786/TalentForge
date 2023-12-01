@@ -28,6 +28,27 @@ namespace TalentForge.UI.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Login(string Username, string Password)
+        {
+            // Here you would typically validate the username and password
+            // and perform authentication logic (e.g., check against a database)
+            // For the sake of this example, I'll assume a simple check
+
+            if (Username == "example" && Password == "password")
+            {
+                // Successful login
+                return RedirectToAction("RUHome", "RegUser");
+            }
+            else
+            {
+                // Failed login
+                ViewData["ErrorMessage"] = "Invalid username or password";
+                return View("Login");
+            }
+        }
+
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
