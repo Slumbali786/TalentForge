@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Huge Buttons with Image</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Style for the buttons */
+        .huge-button {
+            display: inline-block;
+            width: 45%; /* Adjust the width as needed */
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            position: relative; /* Add relative positioning */
+            left: 20px; /* Move the button 20px to the right */
+        }
+
+        /* Style for the headings */
+        .button-heading {
+            font-family: 'Stencil', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: black; /* Set text color to black */
+        }
+
+        /* Style for the text below the headings */
+        .button-text {
+            line-height: 1.5;
+            color: black; /* Set text color to black */
+            margin-left: 1px; /* Adjust the margin for indentation */
+            list-style-type: none; /* Remove the dot/point */
+            padding-left: 0; /* Remove padding for the list */
+        }
+
+        /* Style for the User button */
+        .user-button {
+            background-color: #8CC84B; /* Light green color */
+            color: black; /* Black text */
+        }
+
+        /* Style for the Company button */
+        .company-button {
+            background-color: #FFA500; /* Medium orange color */
+            color: black; /* Black text */
+        }
+
+        /* Style for the centered image */
+        .centered-image {
+            display: block;
+            margin: 0 auto; /* Center the image */
+            max-width: 100%; /* Ensure the image doesn't exceed its container */
+        }
+
+        /* Style for the heading */
+        .account-heading {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px; /* Add margin to separate from the image */
+            color: black; /* Set text color to black */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- Centered Image -->
+        <img src="@Url.Content("~/IMG-20230819-WA0002-removebg-preview.png")" alt="TalentForge Image" class="centered-image" width="250">
+
+        <div class="account-heading">Create an account:</div>
+
+        <!-- First Button - User Account -->
+        <button class="huge-button user-button" onclick="redirectTo('Home/CreateRegAccount')">
+            <div class="button-heading">User Account</div>
+            <ul class="button-text">
+                <li>Easy CV creation.</li>
+                <li>Easy Job Search.</li>
+                <li>Add your CV to TalentBox</li>
+            </ul>
+        </button>
+
+        <!-- Second Button - Company Account -->
+        <button class="huge-button company-button" onclick="redirectTo('Home/CreateCompAccount')">
+            <div class="button-heading">Company Account</div>
+            <ul class="button-text">
+                <li>Easy to post jobs.</li>
+                <li>Easily create company type CVs.</li>
+                <li>Faster recruitment through TalentBox.</li>
+            </ul>
+        </button>
+
+        <script>
+            function redirectTo(action) {
+                window.location.href = '/' + action;
+            }
+        </script>
+    </div>
+</body>
+</html>

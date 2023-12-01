@@ -28,6 +28,21 @@ namespace TalentForge.UI.Controllers
             return View();
         }
 
+        public IActionResult CreateAccounts()
+        {
+            return View();
+        }
+
+        public IActionResult CreateRegAccount()
+        {
+            return View();
+        }
+
+        public IActionResult CreateCompAccount()
+        {
+            return View();
+        }
+
         [HttpPost]
         public IActionResult Login(string Username, string Password)
         {

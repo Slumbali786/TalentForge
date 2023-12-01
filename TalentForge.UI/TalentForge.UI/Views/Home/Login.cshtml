@@ -14,6 +14,10 @@
         font-size: 34px; /* Adjust the font size to make the button bigger */
         padding: 10px 20px; /* Adjust padding for width and height */
     }
+
+    .nav-item {
+        list-style-type: none;
+    }
 </style>
 <div class="container">
     <h1 class="display-4 text-center">TalentForge Login</h1>
@@ -27,6 +31,11 @@
                 <!-- Second Column (Centered) -->
 
                 <table class="table">
+                    <tr>
+                        <td>
+                            <label></label>
+                        </td>
+                    </tr>
                     <tr>
                         <td>
                             <label for="Username">Username:</label>
@@ -59,15 +68,15 @@
                 <div class="text-center">
                     <button type="submit" class="btn btn-primary btn-md">Login</button>
                 </div>
+
+                <!-- "Create an account" link -->
+                <li class="nav-item">
+                    <a class="nav-link text-primary" asp-area="" asp-controller="Home" asp-action="CreateAccounts"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Create an account</a>
+                </li>
             </div>
             <div class="col-md-3">
                 <!-- Third Column -->
             </div>
         </div>
     </form>
-
-    <!-- Move this outside of the form -->
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="RegUser" asp-action="RUHome">Reg User Home</a>
-    </li>
 </div>
