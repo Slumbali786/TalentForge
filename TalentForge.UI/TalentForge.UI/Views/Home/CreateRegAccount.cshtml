@@ -3,116 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .tile {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+
+            input[type="radio"],
+            input[type="checkbox"] {
+                margin-right: 5px;
+            }
+
+            input[type="submit"] {
+                background-color: #4caf50;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+                input[type="submit"]:hover {
+                    background-color: #45a049;
+                }
+    </style>
+    <title>Form</title>
 </head>
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-    }
-
-    form {
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        padding: 20px;
-        width: 50%;
-        margin: auto;
-    }
-
-    .form-group {
-        margin-bottom: 15px;
-    }
-
-    label {
-        display: block;
-        margin-bottom: 5px;
-    }
-
-    input, textarea {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-    }
-
-    button[type="submit"]:hover {
-        opacity: 0.8;
-    }
-
-    button[type="submit"] {
-        background-color: #4CAF50;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        cursor: pointer;
-        width: 100%;
-    }
-</style>
 <body>
-    <form method="post" asp-controller="Home" asp-action="Login">
-        <h1>User Registration Form</h1>
-        <div class="form-group">
-            <label for="ruid">RUID:</label>
-            <input type="text" name="ruid" id="ruid" required>
+    <div class="container">
+        <div class="tile">
+            <h2>Tile 1: User Information</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" name="surname">
+
+                
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+
+                <label>Marital Status:</label>
+                <input type="radio" id="single" name="maritalStatus" value="single">
+                <label for="single">Single</label>
+                <input type="radio" id="married" name="maritalStatus" value="married">
+                <label for="married">Married</label>
+
+                
+                <label for="contactNumber">Contact Number:</label>
+                <input type="text" id="contactNumber" name="contactNumber">
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email">
+
+                <label for="residentialAddress">Residential Address:</label>
+                <input type="text" id="residentialAddress" name="residentialAddress">
+
+                <label for="postalAddress">Postal Address:</label>
+                <input type="text" id="postalAddress" name="postalAddress">
+
+                
+            </form>
         </div>
-        <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" name="name" id="name" required>
+
+        <div class="tile">
+            <h2>Tile 2: Skills</h2>
+            <form>
+                <label for="skill1">Skill 1:</label>
+                <input type="text" id="skill1" name="skill1">
+
+                
+                <label for="skill2">Skill 2:</label>
+                <input type="text" id="skill2" name="skill2">
+
+                
+            </form>
         </div>
-        <div class="form-group">
-            <label for="surname">Surname:</label>
-            <input type="text" name="surname" id="surname" required>
+
+        <div class="tile">
+            <h2>Tile 3: Employee History</h2>
+            <form>
+                <label for="companyName">Company Name:</label>
+                <input type="text" id="companyName" name="companyName">
+
+                <label for="position">Position:</label>
+                <input type="text" id="position" name="position">
+
+                <label for="reference">Reference:</label>
+                <input type="text" id="reference" name="reference">
+
+                <label for="referenceContact">Reference Contact details:</label>
+                <input type="text" id="referenceContact" name="referenceContact">
+
+            </form>
         </div>
-        <div class="form-group">
-            <label for="nationality">Nationality:</label>
-            <input type="text" name="nationality" id="nationality">
+
+        <div class="tile">
+            <h2>Tile 4: School Information</h2>
+            <form>
+                <label for="lastSchool">Last School Attended:</label>
+                <input type="text" id="lastSchool" name="lastSchool">
+
+                <label for="highestGrade">Highest Grade Passed:</label>
+                <input type="text" id="highestGrade" name="highestGrade">
+
+                <label for="finalYear">Final Year:</label>
+                <input type="text" id="finalYear" name="finalYear">
+
+                <label for="lastSchool">Last School Attended:</label>
+                <input type="text" id="lastSchool" name="lastSchool">
+
+                <label for="highestGrade">Highest Grade Passed:</label>
+                <input type="text" id="highestGrade" name="highestGrade">
+
+                <label for="finalYear">Final Year:</label>
+                <input type="text" id="finalYear" name="finalYear">
+
+                <input type="checkbox" id="maths" name="subject" value="maths">
+                <label for="maths">Maths</label>
+
+                <input type="checkbox" id="mathLit" name="subject" value="mathLit">
+                <label for="mathLit">Math Lit</label>
+
+                <input type="checkbox" id="physics" name="subject" value="physics">
+                <label for="physics">Physics</label>
+
+                <input type="checkbox" id="lifeScience" name="subject" value="lifeScience">
+                <label for="lifeScience">Life Science</label>
+
+                <input type="checkbox" id="lo" name="subject" value="lo">
+                <label for="lo">LO</label>
+
+                <input type="checkbox" id="english" name="subject" value="english">
+                <label for="english">English</label>
+
+                <input type="checkbox" id="afrikaans" name="subject" value="afrikaans">
+                <label for="afrikaans">Afrikaans</label>
+
+                <input type="checkbox" id="it" name="subject" value="it">
+                <label for="it">IT</label>
+
+                <input type="checkbox" id="accounting" name="subject" value="accounting">
+                <label for="accounting">Accounting</label>
+
+                <input type="checkbox" id="businessStudies" name="subject" value="businessStudies">
+                <label for="businessStudies">Business Studies</label>
+
+                <input type="checkbox" id="tourism" name="subject" value="tourism">
+                <label for="tourism">Tourism</label>
+
+                <input type="checkbox" id="art" name="subject" value="art">
+                <label for="art">Art</label>
+
+                <input type="checkbox" id="drama" name="subject" value="drama">
+                <label for="drama">Drama</label>
+
+
+            </form>
         </div>
-        <div class="form-group">
-            <label for="id_number">ID Number:</label>
-            <input type="text" name="id_number" id="id_number" required>
+
+        <div class="tile">
+            <h2>Tile 5: Higher Education</h2>
+            <form>
+               
+                    <label for="collegeName">College Name and Location:</label>
+                    <input type="text" id="collegeName" name="collegeName">
+
+                    <label for="fieldOfStudy">Field Of Study:</label>
+                    <input type="text" id="fieldOfStudy" name="fieldOfStudy">
+
+                    <label>Active:</label>
+                    <input type="radio" id="activeYes" name="active" value="yes">
+                    <label for="activeYes">Yes</label>
+                    <input type="radio" id="activeNo" name="active" value="no">
+                    <label for="activeNo">No</label>
+
+                    <label>Complete:</label>
+                    <input type="radio" id="completeYes" name="complete" value="yes">
+                    <label for="completeYes">Yes</label>
+                    <input type="radio" id="completeNo" name="complete" value="no">
+                    <label for="completeNo">No</label>
+
+                <input type="submit" value="Submit">
+            </form>
         </div>
-        <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" required>
-        </div>
-        <div class="form-group">
-            <label for="gender">Gender:</label>
-            <br>
-            <label for="male">Male</label>
-            <input type="radio" name="gender" id="male" value="male">
-            <label for="female">Female</label>
-            <input type="radio" name="gender" id="female" value="female">
-        </div>
-        <div class="form-group">
-            <label for="marital_status">Marital Status:</label>
-            <br>
-            <label for="single">Single</label>
-            <input type="radio" name="marital_status" id="single" value="single">
-            <label for="married">Married</label>
-            <input type="radio" name="marital_status" id="married" value="married">
-        </div>
-        <div class="form-group">
-            <label for="contact_number">Contact Number:</label>
-            <input type="tel" name="contact_number" id="contact_number" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" required>
-        </div>
-        <div class="form-group">
-            <label for="residence_address">Resident Address:</label>
-            <textarea name="residence_address" id="residence_address" required></textarea>
-        </div>
-        <div class="form-group">
-            <label for="postal_address">Postal Address:</label>
-            <textarea name="postal_address" id="postal_address"></textarea>
-        </div>
-        <div class="form-group">
-            <button type="submit">Register</button>
-        </div>
-    </form>
+    </div>
 </body>
 </html>
